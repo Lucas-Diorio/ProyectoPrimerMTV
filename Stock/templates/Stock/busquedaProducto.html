@@ -1,0 +1,24 @@
+{% extends "Stock/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">Formulario de busqueda de Productos</h1>
+
+{% endblock %}
+
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'buscar' %}" method="GET">
+
+    <p> Ingrese nroparte: <input type="number" name="nroparte" id="nroparte"> </p>
+   
+    <input type="submit" value="Buscar">
+    
+</form>
+
+{{ mensaje }}
+
+{% endblock %}

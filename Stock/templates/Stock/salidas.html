@@ -1,0 +1,26 @@
+{% extends "Stock/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">ESTE TITULO VIENE DE SALIDAS</h1>
+
+{% endblock %}
+
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'salidas' %}" method="POST">{% csrf_token %}
+
+    <table>
+    
+        {{ form.as_table }}
+    
+    </table>
+    
+    <input type="submit" value="CARGAR">
+    
+</form>
+
+{% endblock %}
