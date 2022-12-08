@@ -2,7 +2,7 @@ from django import forms
 
 class ProductoForm(forms.Form):
     nroparte=forms.IntegerField()
-    nombre=forms.CharField(max_length=50)
+    descripcion=forms.CharField(max_length=50)
     costo=forms.FloatField()
     cantidad=forms.IntegerField()
 

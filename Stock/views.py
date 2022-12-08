@@ -29,10 +29,12 @@ def productoFormulario(request):
         if form.is_valid():
             informacion=form.cleaned_data
             print(informacion)
-            productito=informacion["nombre"]
+            productito=informacion["descripcion"]
             cantidadd=informacion["cantidad"]
+            nroorden=informacion["nroparte"]
+            costito=informacion["costo"]
 
-            producto1=Productos(nombre=productito,cantidad=cantidadd)
+            producto1=Productos(nroparte=nroorden,descripcion=productito,costo=costito,cantidad=cantidadd)
             producto1.save()
             return render(request, "Stock/inicio.html")
 
